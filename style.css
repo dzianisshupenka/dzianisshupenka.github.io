@@ -1,0 +1,692 @@
+body {
+    background-color: #e7ebf0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Calibri';
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    width: 990px;
+    height: 98vh;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.main_header {
+    position: relative;
+    z-index: 5;
+    font-size: 17px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 49px;
+    background-color: #5682a3;
+}
+
+.main_menu {
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    width: 297px;
+    height: 49px;
+    background-color: #5682a3
+}
+
+.main_menu:hover {
+    background-color: #497799
+}
+
+.burger {
+    width: 60px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon {
+    position: relative;
+    width: 19px;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  .menu-icon::before {
+    position: absolute;
+    left: 0;
+    top: -7px;
+    content: '';
+    width: 19px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  
+  }
+  
+  .menu-icon::after {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    content: '';
+    width: 19px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  
+  }
+  
+  .menu-icon.menu-icon-active {
+    background-color: transparent;
+  }
+  
+  .menu-icon.menu-icon-active::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+  
+  .menu-icon.menu-icon-active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+.telegram {
+    padding-left: 20px;
+    line-height: 49px;
+    color: #fff;
+}
+
+.chanel_info {
+    cursor: pointer;
+    display: flex;
+    width: 364px;
+    height: 49px;
+    line-height: 49px;
+    color: #fff;
+}
+
+.name {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.members {
+    padding-left: 10px;
+    color: #ffffffaf;
+}
+
+.recent_messages {
+    z-index: 5;
+    cursor: pointer;
+    width: 230px;
+    height: 49px;
+    text-align: center;
+    line-height: 49px;
+    color:  #ffffffaf;
+    font-weight: bold;
+}
+
+.recent_messages:hover {
+    background-color: #497799;
+    color: #fff;
+}
+
+.chanel_info:hover {
+    background-color: #497799;
+}
+
+.chanel_info:hover .members {
+    color: #fff;
+}
+
+.search {
+    z-index: 5;
+    cursor: pointer;
+    width: 50px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_img {
+    width: 22px;
+    opacity: 0.7;
+}
+
+.search:hover {
+    background-color: #497799
+}
+
+.source_menu {
+    z-index: 5;
+    cursor: pointer;
+    width: 50px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.source_menu_img {
+    width: 26px;
+    opacity: 0.7;
+}
+
+.source_menu:hover {
+    background-color: #497799
+}
+
+.side_main_menu {
+    position: absolute;
+    z-index: 3;
+    width: 295px;
+    height: 230px;
+    border: 1px solid #e7ebf0;
+    background-color: rgb(255, 255, 255);
+    top: -500px;
+    padding: 10px 0;
+    transition: 0.4s top
+}
+
+.side_source_menu {
+    position: absolute;
+    z-index: 0;
+    width: 200px;
+    height: 440px;
+    border: 1px solid #e7ebf0;
+    background-color: rgb(255, 255, 255);
+    top: -500px;
+    right: 0;
+    transition: 0.4s top
+}
+
+.menu_active {
+    top: 49px;
+}
+
+.main_list {
+    z-index: 3;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.source_list {
+    z-index: 3;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.source_item {
+    text-align: left;
+    width: 90%;
+    height: 45px;
+    padding-left: 20px;
+    color: #497799;
+    line-height: 45px;
+}
+
+.source_item:hover {
+    background-color: #f2f6fa;
+}
+
+.main_list_item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    color: #497799;
+    line-height: 45px;
+}
+
+.main_list_item img {
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.main_list_item:hover {
+    background-color: #f2f6fa;
+}
+
+.content_wrapper {
+    display: flex;
+    width: 990px;
+    height: 740px;
+}
+
+.chanels_list {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 297px;
+    height: 100%;
+    border-right: 2px solid #e7ebf0;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 2px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #bcc9d2; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #bcc9d2; 
+}
+
+.messages {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 693px;
+    height: 84%;
+}
+
+.chanel {
+    cursor: pointer;
+    overflow: hidden;
+    width: 297px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+}
+
+.chanel:hover {
+    background-color: #f2f6fa;
+}
+
+.chanel_logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 16px;
+    border-radius: 50%;
+}
+
+.chanel_info_wrapper {
+    margin-left: 16px;
+    height: 42px;
+}
+
+.chanel_name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.author {
+    color: #5c86ab;
+}
+
+.last_message {
+    width: 145px;
+    color: #a3a3a3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.alerts_wrapper {
+    overflow: hidden;
+    width: 60px;
+    height: 42px;
+    display: flex;flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message_date {
+    font-size: 11px;
+    color: #b3b3b3;
+}
+
+.unread_messages_count {
+    height: 15px;
+    line-height: 15px;
+    padding: 2px;
+    background-color: #bfbfbf;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.search_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 297px;
+    height: 60px;
+}
+
+.search_input input {
+    padding-left: 20px;
+    border-radius: 2px;
+    width: 80%;
+    height: 35px;
+    border: none;
+    background: url(./img/search.png) no-repeat center left;
+    background-color: #f2f2f2;
+}
+
+input[type="search"]::placeholder { 
+    color: #9aa2ab; 
+}
+
+.message_wrapper {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 693px;
+    display: flex;
+}
+
+.message_wrapper:hover .flag_img{
+    display: inline;
+    opacity: 0.5;
+}
+
+.flag {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag_img {
+    display: none;
+}
+
+.author_avatar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message_text {
+    font-size: 15px;
+    margin-left: 20px;
+    width: 350px;
+}
+
+.nickname1 {
+    display: block;
+    color: #ecd074;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nickname2 {
+    display: block;
+    color: #73aac2;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nickname3 {
+    display: block;
+    color: #539e4f;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.message_time {
+    margin-left: 50px;
+    font-size: 13px;
+    color: #adadad;
+    width: 70px;
+}
+
+.author_avatar_img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.message_input {
+    position: absolute;
+    bottom:0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 693px;
+    height: 100px;
+    background-color: #fff;
+}
+
+.hero {
+    margin-left: 90px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.hero_message_input {
+    width: 350px;
+    border: none;
+    outline: none;
+    overflow: wrap;
+    margin-left: 20px;
+}
+
+.hero_message_input:focus {
+    border-bottom: 2px solid rgb(44, 132, 231);
+}
+
+.emodji {
+    width: 310px;
+    margin-left: 170px;
+}
+
+.emodji>img {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.input_btn {
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    outline: none;
+    color: #72c7f2;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+
+    .container {
+        width: 100vw;
+    }
+
+    .side_main_menu {
+        width: 30vw;
+    }
+
+    .side_source_menu {
+        width: 20vw;
+    }
+
+    .search {
+        width: 5vw;
+    }
+
+    .source_menu {
+        width: 5vw;
+    }
+
+    .chanel_logo {
+        margin-left: 5px;
+    }
+
+    .chanels_list {
+        width: 30vw;
+    }
+
+    .search_input {
+        width: 30vw;
+    }
+
+    .messages {
+        width: 70vw;
+    }
+
+    .last_message {
+        width: 14.5vw;
+    }
+
+    .chanel_info_wrapper {
+        margin-left: 5px;
+    }
+
+    .flag {
+        width: 9vw;
+    }
+
+    .message_text {
+        width: 35vw;
+    }
+
+    .hero {
+        margin-left: 9vw;
+    }
+
+    .message_input {
+        width: 70vw;
+    }
+
+    .emodji {
+        margin-left: 16vw;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .message_input {
+        height: 50px;
+    }
+
+    .hero_message_input {
+        width: 30vw;
+        margin-left: 18vw;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    .emodji {
+        display: none;
+    }
+
+    .message_time {
+        margin-left: 20px;
+    }
+
+    .main_header {
+        font-size: 15px;
+    }
+
+    .search {
+        width: 5vw;
+    }
+
+    .source_menu {
+        width: 5vw;
+    }
+
+    .last_message {
+        width: 12vw;
+    }
+
+    .chanel_logo {
+        width: 40px;
+        height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .burger {
+        display: none;
+    }
+
+    .chanel_info {
+        display: none;
+    }
+
+    .recent_messages {
+        display: none;
+    }
+
+    .telegram {
+        margin-left: 30px;
+    }
+
+    .messages {
+        display: none;
+    }
+
+      .chanels_list {
+        width: 100vw;
+    }
+
+    .chanel {
+        width: 100vw;
+    }
+
+    .chanel_logo {
+        width: 50px;
+        height: 50px;
+        margin-left: 16px;
+    }
+
+    .chanel_info_wrapper {
+        margin-left: 16px;
+        width: 70vw;
+    }
+
+    .last_message {
+        width: 60vw;
+    }
+
+    .main_menu {
+        width: 80vw;
+    }
+
+    .search {
+        width: 10vw;
+    }
+
+    .source_menu {
+
+        width: 10vw;
+    }
+
+    .search_input {
+        width: 80vw;
+    }
+
+    .side_source_menu {
+        display: none;
+    }
+
+    .side_main_menu {
+        display: none;
+    }
+
+  }
