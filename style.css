@@ -293,7 +293,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     width: 693px;
-    height: 84%;
+    height: calc(100% - 100px);
 }
 
 .chanel {
