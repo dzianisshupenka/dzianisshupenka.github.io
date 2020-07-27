@@ -262,9 +262,9 @@ body {
 
 .chanels_list {
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 297px;
-    height: 100%;
+    height: calc(98vh - 49px);
     border-right: 2px solid #e7ebf0;
 }
 
@@ -290,10 +290,15 @@ body {
 }
 
 .messages {
-    overflow-y: scroll;
+    width: 693px;
+    height: 100%;
+}
+
+.messages_container {
+    overflow-y: auto;
     overflow-x: hidden;
     width: 693px;
-    height: calc(100% - 100px);
+    height: calc(98vh - 149px);
 }
 
 .chanel {
@@ -462,7 +467,7 @@ input[type="search"]::placeholder {
     bottom:0;
     display: flex;
     flex-wrap: wrap;
-    width: 693px;
+    width: 600px;
     height: 100px;
     background-color: #fff;
 }
